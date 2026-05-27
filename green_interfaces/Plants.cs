@@ -1,4 +1,4 @@
-using green_interfaces;
+namespace green_interfaces;
 
 public abstract class Plants
 {
