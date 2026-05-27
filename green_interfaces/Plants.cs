@@ -59,3 +59,19 @@ public class Pumpkin : Plants, ICookable
         return "Suppe, Backgemüse";
     }
 }
+
+public class ChestnutTree : Plants, IWoodProducer
+{
+    public ChestnutTree(string name, int ageInYears) : base(name, ageInYears)
+    {}
+
+    public override string GetDescription()
+    {
+        return $"Kastanienbaum '{Name}', Alter: {AgeInYears} Jahre";
+    }
+
+    public string GetWoodUsage()
+    {
+        return "Zäune, Brennholz";
+    }
+}
