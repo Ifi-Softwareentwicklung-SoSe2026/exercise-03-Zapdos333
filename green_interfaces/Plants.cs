@@ -26,3 +26,20 @@ public interface IWoodProducer
 {
     string GetWoodUsage();
 }
+
+public class AppleTree : Plants, IWoodProducer
+{
+
+    public AppleTree(string name, int ageInYears) : base(name, ageInYears)
+    {}
+
+    public override string GetDescription()
+    {
+        return $"Apfelbaum '{Name}', Alter: {AgeInYears} Jahre";
+    }
+
+    public string GetWoodUsage()
+    {
+        return "Möbel, Werkzeuggriffe, Brennholz";
+    }
+}
