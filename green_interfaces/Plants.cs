@@ -27,7 +27,7 @@ public interface IWoodProducer
     string GetWoodUsage();
 }
 
-public class AppleTree : Plants, IWoodProducer
+public class AppleTree : Plants, ICookable, IWoodProducer
 {
 
     public AppleTree(string name, int ageInYears) : base(name, ageInYears)
@@ -36,6 +36,10 @@ public class AppleTree : Plants, IWoodProducer
     public override string GetDescription()
     {
         return $"Apfelbaum '{Name}', Alter: {AgeInYears} Jahre";
+    }
+    public string GetCookingSuggestion()
+    {
+        return "Apfelmus, Saft";
     }
 
     public string GetWoodUsage()
