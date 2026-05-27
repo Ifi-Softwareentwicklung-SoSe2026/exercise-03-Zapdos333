@@ -43,3 +43,19 @@ public class AppleTree : Plants, IWoodProducer
         return "Möbel, Werkzeuggriffe, Brennholz";
     }
 }
+
+public class Pumpkin : Plants, ICookable
+{
+    public Pumpkin(string name, int ageInYears) : base(name, ageInYears)
+    {}
+
+    public override string GetDescription()
+    {
+        return $"Kürbis '{Name}', Alter: {AgeInYears} Jahre";
+    }
+
+    public string GetCookingSuggestion()
+    {
+        return "Suppe, Backgemüse";
+    }
+}
