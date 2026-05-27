@@ -2,14 +2,11 @@ name: dotnet-build
 
 on:
   push:
-    branches:
-      - "test/**"
-      - "feat/**"
-      - "fix/**"
     paths:
       - "**/*.cs"
       - "**/*.csproj"
       - "**/*.sln"
+  workflow_dispatch:
 
 jobs:
   dotnet-build:
@@ -23,7 +20,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: "10.0.x"
+          dotnet-version: "8.0.x"
 
       - name: Discover C# projects
         id: discover
